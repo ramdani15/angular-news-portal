@@ -1,0 +1,62 @@
+/* Main card container */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Centered card title */
+.card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    /* Center the title */
+}
+
+/* Content snippet */
+.card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Content snippet */
+.reactions span {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    margin-left: 3px;
+    margin-bottom: 40px;
+}
+
+/* Button style */
+.card button {
+    align-self: start;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Button hover effect */
+.card button:hover {
+    background-color: #0056b3;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,32 @@
+<div class="comment">
+    <!-- comment content -->
+    <p><strong>User:</strong> {{ comment.author.name }}</p>
+    <p>{{ comment.content }}</p>
+    <small>Posted on: {{ comment.createdAt | date: 'short' }}</small>
+
+    <div class="comment-actions">
+        <span>{{ comment.totalLikes }} Likes</span> |
+        <span>{{ comment.totalDislikes }} Dislikes</span>
+
+        <!-- like and dislike buttons -->
+        <div>
+            <button (click)="reactionComment(comment, reaction.LIKE)" [disabled]="comment.isDisliked">
+                <span *ngIf="comment.isLiked">Liked</span>
+                <span *ngIf="!comment.isLiked">Like</span>
+            </button>
+            <button (click)="reactionComment(comment, reaction.DISLIKE)" [disabled]="comment.isLiked">
+                <span *ngIf="comment.isDisliked">Disliked</span>
+                <span *ngIf="!comment.isDisliked">Dislike</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- reply button -->
+    <button *ngIf="!isChild" (click)="toggleReply(comment)" class="reply-btn">Reply</button>
+
+    <!-- reply form -->
+    <div *ngIf="isShowReply" class="reply-form">
+        <app-comment-form [articleId]="comment.articleId" [parentId]="comment.id"
+            (newReply)="onNewReply($event)"></app-comment-form>
+    </div>
+</div>

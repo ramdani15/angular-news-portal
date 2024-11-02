@@ -1,0 +1,70 @@
+/* Form container styles */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Label styles */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input field styles */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button styles */
+button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+.general-error {
+    text-align: center;
+    color: red;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.field-error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}

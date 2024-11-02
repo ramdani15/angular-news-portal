@@ -1,0 +1,122 @@
+/* Article detail container styling */
+.article-detail {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Main form styling */
+.article-form {
+  width: 100%;
+  max-width: 600px;
+  /* Limits form width for readability */
+  background-color: #f8f9fa;
+  /* Light background color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Soft shadow effect */
+}
+
+/* Label styling */
+.article-form label {
+  display: block;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Input and Textarea styling */
+.article-form input[type="text"],
+.article-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Consistent padding */
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Hover and focus effect for inputs */
+.article-form input[type="text"]:focus,
+.article-form textarea:focus {
+  border-color: #007bff;
+  /* Blue border on focus */
+}
+
+/* Textarea adjustments */
+.article-form textarea {
+  min-height: 120px;
+  /* Ensures ample space for text */
+  resize: vertical;
+  /* Allows only vertical resizing */
+}
+
+/* Button styling */
+.article-form button[type="submit"] {
+  width: 100%;
+  /* Full width button */
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  /* Blue background */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.article-form button[type="submit"]:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
+
+/* Back button style */
+.btn-back {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  /* White text */
+  background-color: #007bff;
+  /* Blue background for Back button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+  /* Space below the button */
+}
+
+/* Back button hover effect */
+.btn-back:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+.general-error {
+  text-align: center;
+  color: red;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.field-error {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,23 @@
+/* Container for the whole page */
+.article-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Centered Title */
+.page-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Article List Styling */
+.article-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+}

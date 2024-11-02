@@ -1,0 +1,20 @@
+<div *ngIf="comments.length" class="comment-list">
+    <div *ngFor="let comment of comments" class="comment-section">
+        <app-comment-detail [comment]="comment"></app-comment-detail>
+
+        <!-- Nested Comments -->
+        <div *ngIf="comment.replies.length" class="nested-comments">
+            <div *ngFor="let reply of comment.replies" class="comment-section">
+                <app-comment-detail [comment]="reply" [isChild]="true"></app-comment-detail>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div *ngIf="pagination.page < pagination.totalPage" class="load-more">
+        <button (click)="loadMore()" [disabled]="isLoading">Load More</button>
+    </div>
+</div>
+
+<!-- Add Comment -->
+<app-comment-form [articleId]="articleId" (newComment)="onNewComment($event)"></app-comment-form>

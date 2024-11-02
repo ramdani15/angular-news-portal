@@ -1,0 +1,23 @@
+<div *ngIf="article" class="article-detail">
+    <form (submit)="save()" class="article-form">
+        <div *ngIf="errorMessages['general']" class="error general-error">
+            {{ errorMessages['general'] }}
+        </div>
+
+        <label for="title">Title:</label>
+        <input [(ngModel)]="article.title" name="title" id="title" />
+        <div *ngIf="errorMessages['title']" class="error field-error">
+            {{ errorMessages['title'] }}
+        </div>
+
+        <label for="content">Content:</label>
+        <textarea [(ngModel)]="article.content" name="content" id="content"></textarea>
+        <div *ngIf="errorMessages['content']" class="error field-error">
+            {{ errorMessages['content'] }}
+        </div>
+
+        <button type="submit">Save</button>
+    </form>
+</div>
+
+<button (click)="goBack()" class="btn-back">Back</button>

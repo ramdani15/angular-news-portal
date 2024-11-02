@@ -1,0 +1,14 @@
+<header>
+  <nav>
+    <a routerLink="/">Home</a>
+    <ng-container *ngIf="authService.isLoggedIn() | async">
+      <a *ngIf="authService.isAdminUser() | async" routerLink="/admin/articles">Manage Articles</a>
+      <a *ngIf="!(authService.isAdminUser() | async)" routerLink="/user/articles">Manage Articles</a>
+      <button *ngIf="authService.isLoggedIn() | async" (click)="logout()">Logout</button>
+    </ng-container>
+    <ng-container *ngIf="!(authService.isLoggedIn() | async)">
+      <a routerLink="/signup">Sign Up</a>
+      <a routerLink="/login">Login</a>
+    </ng-container>
+  </nav>
+</header>

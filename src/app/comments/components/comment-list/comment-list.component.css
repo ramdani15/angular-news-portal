@@ -1,0 +1,171 @@
+/* Main comment section */
+.comment-section {
+  margin-bottom: 20px;
+  /* Space between comments */
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  /* Separator between comments */
+}
+
+/* Individual comment styling */
+.comment {
+  padding: 15px;
+  background-color: #f9f9f9;
+  /* Light background for comments */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* User info styling */
+.comment p {
+  margin: 5px 0;
+  /* Space between paragraphs */
+}
+
+/* Timestamp style */
+.comment small {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Comment actions section */
+.comment-actions {
+  margin-top: 10px;
+  /* Space above actions */
+  font-size: 14px;
+  color: #555;
+}
+
+/* Likes and dislikes text */
+.comment-actions span {
+  margin-right: 10px;
+  /* Space between like/dislike text */
+}
+
+/* Button container for like/dislike buttons */
+.comment-actions div {
+  margin-top: 10px;
+  /* Space above buttons */
+}
+
+/* Like and dislike button styles */
+.comment-actions button {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #007bff;
+  /* Blue for Like */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+  /* Space between buttons */
+}
+
+/* Dislike button style */
+.comment-actions button:nth-child(2) {
+  background-color: #dc3545;
+  /* Red for Dislike */
+}
+
+/* Like button hover effect */
+.comment-actions button:first-child:hover {
+  background-color: #0056b3;
+}
+
+/* Dislike button hover effect */
+.comment-actions button:nth-child(2):hover {
+  background-color: #c82333;
+}
+
+/* Replies section */
+.replies {
+  margin-top: 15px;
+  /* Space above replies */
+  padding-left: 20px;
+  /* Indent replies */
+}
+
+/* Replies title */
+.replies-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  /* Space below replies title */
+  color: #333;
+}
+
+/* Reply button styling */
+.reply-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #007bff;
+  /* Blue text */
+  background: none;
+  border: 1px solid #007bff;
+  /* Blue border */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reply-btn:hover {
+  background-color: #007bff;
+  /* Blue background on hover */
+  color: #fff;
+  /* White text on hover */
+}
+
+/* Reply form container styling */
+.reply-form {
+  margin-top: 15px;
+  /* Space above the form */
+  padding: 15px;
+  background-color: #f1f1f1;
+  /* Light background for the form */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+}
+
+/* Cancel button styling */
+.btn-back {
+  margin-top: 10px;
+  /* Space above the button */
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #dc3545;
+  /* Red text */
+  background: none;
+  border: 1px solid #dc3545;
+  /* Red border */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background-color: #dc3545;
+  /* Red background on hover */
+  color: #fff;
+  /* White text on hover */
+}
+
+.load-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.load-more button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.load-more button:hover {
+  background-color: #218838;
+}

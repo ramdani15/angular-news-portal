@@ -1,0 +1,130 @@
+/* Admin article table container */
+.admin-article-table {
+    margin: 20px 0;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header styles */
+thead {
+    background-color: #f2f2f2;
+}
+
+th {
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Table body styles */
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Table cell styles */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+/* Button styles */
+button {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+/* Specific action button styles */
+.add-btn {
+    background-color: #007bff;
+    /* Blue */
+}
+
+.add-btn:hover {
+    background-color: #0056b3;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    /* Blue */
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    /* Red */
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.approve-btn {
+    background-color: #28a745;
+    /* Green */
+}
+
+.approve-btn:hover {
+    background-color: #218838;
+}
+
+.reject-btn {
+    background-color: #dc3545;
+    /* Red */
+}
+
+.reject-btn:hover {
+    background-color: #c82333;
+}
+
+.publish-btn {
+    background-color: #17a2b8;
+    /* Teal */
+}
+
+.publish-btn:hover {
+    background-color: #138496;
+}
+
+.unpublish-btn {
+    background-color: #ffc107;
+    /* Yellow */
+    color: #333;
+    /* Dark text */
+}
+
+.unpublish-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Pagination container style */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.empty {
+    text-align: center;
+}

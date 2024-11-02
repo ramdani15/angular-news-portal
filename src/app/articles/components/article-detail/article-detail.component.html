@@ -1,0 +1,29 @@
+<button (click)="goBack()">Back</button>
+
+<div *ngIf="article; else loading">
+    <h3>{{ article.title }}</h3>
+    <p>{{ article.content }}</p>
+
+    <span>{{ article.totalLikes || 0 }} Likes</span> |
+    <span>{{ article.totalDislikes || 0 }} Dislikes</span>
+
+    <div>
+        <button (click)="reactionArticle(article, reaction.LIKE)" [disabled]="article.isDisliked">
+            <span *ngIf="article.isLiked">Liked</span>
+            <span *ngIf="!article.isLiked">Like</span>
+        </button>
+        <button (click)="reactionArticle(article, reaction.DISLIKE)" [disabled]="article.isLiked">
+            <span *ngIf="article.isDisliked">Disliked</span>
+            <span *ngIf="!article.isDisliked">Dislike</span>
+        </button>
+    </div>
+
+    <h5>Comments</h5>
+    <app-comment-list [articleId]="article.id"></app-comment-list>
+</div>
+
+<ng-template #loading>
+    <p>Loading...</p>
+</ng-template>
+
+<button (click)="goBack()">Back</button>

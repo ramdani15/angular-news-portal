@@ -1,0 +1,63 @@
+<div class="admin-article-table">
+    <!-- Add Article -->
+    <button class="add-btn" (click)="viewAddArticle()">Add Article</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Snippet</th>
+                <th>Status</th>
+                <th>Author</th>
+                <th>Submitted At</th>
+                <th>Approved At</th>
+                <th>Rejected At</th>
+                <th>Published At</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="articles.length; else empty">
+                <tr *ngFor="let article of articles">
+                    <td>{{ article.id }}</td>
+                    <td>{{ article.title }}</td>
+                    <td>{{ article.content | slice: 0:50 }}...</td>
+                    <td>{{ article.status | uppercase }}</td>
+                    <td>{{ article.author.name }}</td>
+                    <td>{{ article.submittedAt | date: 'short' }}</td>
+                    <td>{{ article.approvedAt | date: 'short' }}</td>
+                    <td>{{ article.rejectedAt | date: 'short' }}</td>
+                    <td>{{ article.publishedAt | date: 'short' }}</td>
+                    <td>{{ article.createdAt | date: 'short' }}</td>
+                    <td>{{ article.updatedAt | date: 'short' }}</td>
+                    <td>
+                        <button class="edit-btn" (click)="viewArticle(article.id)">Edit</button>
+                        <button class="delete-btn" (click)="deleteArticle(article.id)">Delete</button>
+                        <button *ngIf="article.status == articleStatus.Pending" class="approve-btn"
+                            (click)="approveArticle(article.id)">Approve</button>
+                        <button *ngIf="article.status == articleStatus.Pending" class="reject-btn"
+                            (click)="rejectArticle(article.id)">Reject</button>
+                        <button *ngIf="article.status == articleStatus.Approved" class="publish-btn"
+                            (click)="publishArticle(article.id)">Publish</button>
+                        <button *ngIf="article.status == articleStatus.Published" class="unpublish-btn"
+                            (click)="unpublishArticle(article.id)">Unpublish</button>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+
+    <!-- Pagination Controls -->
+    <app-pagination [currentPage]="pagination.page" [totalPage]="pagination.totalPage"
+        (pageChange)="onPaginationChange($event)">
+    </app-pagination>
+</div>
+
+<ng-template #empty>
+    <tr>
+        <td colspan="12" class="empty">No articles found.</td>
+    </tr>
+</ng-template>

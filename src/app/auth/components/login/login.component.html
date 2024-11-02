@@ -1,0 +1,19 @@
+<form (submit)="login()">
+    <div *ngIf="errorMessages['general']" class="error general-error">
+        {{ errorMessages['general'] }}
+    </div>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" [(ngModel)]="form.email" name="email" required />
+    <div *ngIf="errorMessages['email']" class="error field-error">
+        {{ errorMessages['email'] }}
+    </div>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" [(ngModel)]="form.password" name="password" required />
+    <div *ngIf="errorMessages['email']" class="error field-error">
+        {{ errorMessages['email'] }}
+    </div>
+
+    <button type="submit">Login</button>
+</form>

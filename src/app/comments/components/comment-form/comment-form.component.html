@@ -1,0 +1,13 @@
+<form (submit)="add()" class="comment-form">
+    <div *ngIf="errorMessages['general']" class="error general-error">
+        {{ errorMessages['general'] }}
+    </div>
+
+    <textarea [(ngModel)]="content" name="content" placeholder="{{ parentId ? 'Reply' : 'Comment' }}..."></textarea>
+    <div *ngIf="errorMessages['name']" class="error field-error">
+        {{ errorMessages['name'] }}
+    </div>
+
+    <button *ngIf="parentId" type="submit">Reply</button>
+    <button *ngIf="!parentId" type="submit">Add</button>
+</form>

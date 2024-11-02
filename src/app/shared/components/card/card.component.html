@@ -1,0 +1,10 @@
+<div class="card">
+    <h3>{{ title }}</h3>
+    <p>{{ content | slice: 0:100 }}...</p>
+    <div class="reactions">
+        <span>{{ totalLikes || 0 }} Likes | </span>
+        <span>{{ totalDislikes || 0 }} Dislikes | </span>
+        <span>{{ totalComments || 0 }} Comments</span>
+    </div>
+    <button (click)="viewDetail()">Read more</button>
+</div>

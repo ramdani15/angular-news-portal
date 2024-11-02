@@ -1,0 +1,21 @@
+<div *ngIf="articles.length; else loading" class="article-container">
+  <!-- Centered Title -->
+  <h2 class="page-title">Articles List</h2>
+
+  <!-- Article List -->
+  <div class="article-list">
+    <app-card *ngFor="let article of articles" [title]="article.title" [content]="article.content"
+      [detailUrl]="'/articles/' + article.id" [isLiked]="article.isLiked" [totalLikes]="article.totalLikes"
+      [isDisliked]="article.isDisliked" [totalDislikes]="article.totalDislikes" [totalComments]="article.totalComments">
+    </app-card>
+  </div>
+
+  <!-- Pagination Controls -->
+  <app-pagination [currentPage]="pagination.page" [totalPage]="pagination.totalPage"
+    (pageChange)="onPaginationChange($event)">
+  </app-pagination>
+</div>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>

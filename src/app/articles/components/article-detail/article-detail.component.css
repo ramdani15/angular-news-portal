@@ -1,0 +1,107 @@
+/* Back button style */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    /* White text */
+    background-color: #007bff;
+    /* Blue background for Back button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+    /* Space below the button */
+}
+
+/* Back button hover effect */
+button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Article title */
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Article content */
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Likes and dislikes text */
+span {
+    font-size: 16px;
+    color: #777;
+    margin-right: 10px;
+}
+
+/* Button container for like/dislike buttons */
+div {
+    margin-bottom: 20px;
+}
+
+/* Like button styles */
+div button:first-child {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    /* White text */
+    background-color: #007bff;
+    /* Blue for Like */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+    /* Space between buttons */
+}
+
+/* Dislike button styles */
+div button:nth-child(2) {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    /* White text */
+    background-color: #dc3545;
+    /* Red for Dislike */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Like button hover effect */
+div button:first-child:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Dislike button hover effect */
+div button:nth-child(2):hover {
+    background-color: #c82333;
+    /* Darker red on hover */
+}
+
+/* Comments section title */
+h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 30px;
+}
+
+/* Loading text style */
+p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    /* Center loading text */
+}
