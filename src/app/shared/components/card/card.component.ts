@@ -10,11 +10,7 @@ export class CardComponent {
   @Input() title!: string;
   @Input() content!: string;
   @Input() detailUrl!: string;
-  @Input() isLiked!: boolean;
-  @Input() totalLikes!: number;
-  @Input() isDisliked!: boolean;
-  @Input() totalDislikes!: number;
-  @Input() totalComments!: number;
+  @Input() reactions: { emoji: string; count: number }[] = [];
 
   constructor(private router: Router) {}
 

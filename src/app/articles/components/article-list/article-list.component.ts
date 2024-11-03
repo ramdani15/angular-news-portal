@@ -45,6 +45,27 @@ export class ArticleListComponent extends PaginationComponent implements OnInit 
     });
   }
 
+  getReactions(article: Article): { emoji: string; count: number }[] {
+    let reactions: { emoji: string; count: number }[] = [];
+
+    reactions.push({
+      emoji: 'Likes',
+      count: article.totalLikes
+    });
+
+    reactions.push({
+      emoji: 'Dislikes',
+      count: article.totalDislikes
+    });
+
+    reactions.push({
+      emoji: 'Comments',
+      count: article.totalComments
+    });
+    
+    return reactions;
+  }
+
   viewArticle(id: string): void {
     this.route.navigate(['/articles', id]);
   }

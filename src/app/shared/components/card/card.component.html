@@ -1,10 +1,11 @@
 <div class="card">
     <h3>{{ title }}</h3>
     <p>{{ content | slice: 0:100 }}...</p>
-    <div class="reactions">
-        <span>{{ totalLikes || 0 }} Likes | </span>
-        <span>{{ totalDislikes || 0 }} Dislikes | </span>
-        <span>{{ totalComments || 0 }} Comments</span>
+    <div class="reactions" *ngIf="reactions.length">
+        <span *ngFor="let reaction of reactions; let i = index">
+            {{ reaction.count }} {{ reaction.emoji }}
+            <ng-container *ngIf="i < reactions.length - 1"> | </ng-container>
+        </span>
     </div>
     <button (click)="viewDetail()">Read more</button>
 </div>

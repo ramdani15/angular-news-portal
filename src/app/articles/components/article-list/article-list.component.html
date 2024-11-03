@@ -5,8 +5,7 @@
   <!-- Article List -->
   <div class="article-list">
     <app-card *ngFor="let article of articles" [title]="article.title" [content]="article.content"
-      [detailUrl]="'/articles/' + article.id" [isLiked]="article.isLiked" [totalLikes]="article.totalLikes"
-      [isDisliked]="article.isDisliked" [totalDislikes]="article.totalDislikes" [totalComments]="article.totalComments">
+      [detailUrl]="'/articles/' + article.id" [reactions]="getReactions(article)">
     </app-card>
   </div>
 
